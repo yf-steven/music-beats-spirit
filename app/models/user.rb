@@ -6,8 +6,6 @@ class User < ApplicationRecord
          
   with_options presence: true do
     validates :nickname, uniqueness: true
-    validates :introduce
-    validates :favorite
     validates :sex_id
     validates :age_id
   end
