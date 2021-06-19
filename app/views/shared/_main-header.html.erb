@@ -1,0 +1,11 @@
+<header>
+  <div class= "title">
+    <%= link_to image_tag('title.png', class: "title-icon"),root_path %>
+  </div>
+  <div class= "navi">
+    <ul class= "right-lists">
+     <li><%= link_to "ログイン", new_user_session_path, class: "login" %></li>
+     <li><%= link_to "新規登録", new_user_registration_path, class: "sign-up" %></li>
+    </ul>
+  </div>
+</header>
