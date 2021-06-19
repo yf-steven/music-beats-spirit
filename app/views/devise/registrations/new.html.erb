@@ -47,21 +47,24 @@
   <div class="form-field">
    <div class="form-wrap">
     <label class="form-text">お気に入りアーティスト</label>
-    <span class="indeispensable">任意</span>
+    <span class="indispensable">任意</span>
    </div>
-   <%= f.text_field :favorite, class:"form-input", placeholder:"お気に入りのアーティストを一人(一組)教えて下さい"%>
+   <%= f.text_field :favorite, class:"form-input", placeholder:"好きなアーティストを一人(一組)教えて下さい"%>
   </div>
   <div class="form-field">
    <div class="form-wrap">
     <label class="form-text">性別</label>
     <span class="indispensable">必須</span>
    </div>
+   <%= f.collection_select( :sex_id, Sex.all, :id, :name, {}, {class: "user-select"} )%>
+   <p class="form-info">※ご自身が思う項目を選んでください</p>
   </div>
   <div class="form-field">
    <div class="form-wrap">
     <label class="form-text">年齢層</label>
     <span class="indispensable">必須</span>
    </div>
+   <%= f.collection_select( :age_id, Age.all, :id, :name, {}, {class: "user-select"} )%>
   </div>
   <div class="form-submit">
     <%= f.submit "ユーザー登録", class:"user-submit-btn" %>
