@@ -64,7 +64,7 @@
 | --------- | ---------- | ---------------- |
 |   title   |   string   |    null:false    |
 |    text   |    text    |    null:false    |
-| recommend |   string   | ---------------- |
+| recommend |    text    | ---------------- |
 |    user   | references | foreign_key:true |
 
 ### association

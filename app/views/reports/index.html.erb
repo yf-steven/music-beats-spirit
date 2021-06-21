@@ -1,2 +1,6 @@
 <%= render "shared/main-header" %>
 
+<%= link_to(new_report_path, class: "report-btn") do %>
+ <%= image_tag 'report-icon', class: "report-btn-icon"%>
+ <span class="report-btn-text">投稿する</span>
+<% end %>

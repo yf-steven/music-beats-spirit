@@ -1,0 +1,67 @@
+.report-contents{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F5F5F5;
+}
+.report-form-main{
+  background-color: white;
+  width: 70vw;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.report-form-subtitle{
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  margin: 10px 0 50px;
+}
+.report-form-field{
+  margin: 10px 0;
+}
+.report-title{
+  margin: 10px 0;
+  border: 1px solid black;
+  padding: 10px;
+  width: 400px;
+}
+.report-text{
+  resize: none;
+  margin: 10px 0;
+  border: 1px solid black;
+  width: 400px;
+  height: 500px;
+}
+.report-recommend{
+  resize: none;
+  margin: 10px 0;
+  border: 1px solid black;
+  width: 400px;
+  height: 80px;
+}
+.report-form-submit{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+.report-send-btn{
+  background-color: #FF0000;
+  color: #F5F5F5;
+  font-weight: bold;
+  width: 150px;
+  text-align: center;
+  padding: 10px 0;
+}
+.back-btn{
+  background-color: #999999;
+  color: #F5F5F5;
+  font-weight: bold;
+  width: 150px;
+  text-align: center;
+  margin: 10px 0;
+  padding: 10px 0;
+}
