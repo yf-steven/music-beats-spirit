@@ -9,7 +9,6 @@ class ReportsController < ApplicationController
   end
 
   def create
-    #binding.pry
     @report = Report.new(report_params)
     if @report.save
       redirect_to root_path

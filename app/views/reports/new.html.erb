@@ -5,7 +5,7 @@
    <h1 class="report-form-subtitle">ライブレポートの記入</h1>
    <%= form_with model: @report, url: reports_path, class: "report-form", local: true do |f| %>
 
-   <%#= render 'shared/error-messages', model: f.object %>
+   <%= render 'shared/error-messages', model: f.object %>
 
    <div class="report-form-feild">
     <div class="report-form-wrap">
