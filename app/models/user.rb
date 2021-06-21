@@ -9,6 +9,8 @@ class User < ApplicationRecord
   validates :sex_id, numericality: { other_than: 1 }
   validates :age_id, numericality: { other_than: 1 }
 
+  has_many :reports
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :sex
   belongs_to :age
