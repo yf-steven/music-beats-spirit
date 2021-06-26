@@ -1,6 +1,66 @@
 <%= render "shared/main-header" %>
 
+<div class="top-main">
+ <div class="top-image-contents">
+  <%= image_tag 'main-top-image', width:"100%", height:"426", class:"top-image" %>
+ </div>
+ <div class="web-explain-contens">
+  <h2 class="explain-title">
+   MUSIC BEATS SPIRITのサービス
+  </h2>
+  <ul class="service-list">
+   <li class="lists">
+    <%= image_tag "report-image.png", class:"list-pict" %>
+    <h3 class="explain-report">
+     ライブレポートの投稿！！
+    </h3>
+    <p class="explain-sentence">
+     ひとりひとりの熱いレポートを書くことも読むこともできます。
+    </p>
+   </li>
+   <li class="lists">
+   <%= image_tag "shinpai_woman.png", class:"list-pict" %>
+    <h3 class="explain-report">
+     ライブ前の不安を解消できる！！
+    </h3>
+    <p class="explain-sentence-2">
+     ライブに初めて行く時、「ライブって激しくて怖いのかな」「家族で行ってみたいけど、子供がいると難しいのかな」
+     <br>「事前にノリとか確認しないといけないのかな」と様々なことを不安に思うものです。
+     <br>このサイトのライブレポートで事前にライブの特徴を知ることができます。
+    </p>
+   </li>
+  </ul>
+ </div>
+ <div class="report-index">
+  <h2 class="index-title">
+   レポート一覧
+  </h2>
+ </div>
+ <ul class="report-lists">
+  <% if @reports.present? %>
+   <% @reports.each do |report| %>
+    <li class="list">
+     <%= link_to "#" do %>
+     <div class="reports-user-nickname">
+      <h3 class="user-nickname">
+       <%= report.user.nickname %>
+      </h3>
+     </div>
+     <div class="reports-title">
+      <h3 class="title">
+       <%= report.title %>
+      </h3>
+     </div>
+     <% end %>
+    </li>
+   <% end %>
+  <% end %>
+ </ul>
+</div>
+
 <%= link_to(new_report_path, class: "report-btn") do %>
  <%= image_tag 'report-icon', class: "report-btn-icon"%>
  <span class="report-btn-text">投稿する</span>
 <% end %>
+
+<%= render "shared/footer" %>

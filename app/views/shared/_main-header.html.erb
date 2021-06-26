@@ -5,7 +5,7 @@
   <div class= "navi">
     <ul class= "right-lists">
      <% if user_signed_in? %>
-      <li><%= link_to current_user.nickname, "#", class:"user-nickname" %>
+      <li><%= link_to current_user.nickname, "#", class:"user-name" %>
       <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"logout" %>
      <% else %>
       <li><%= link_to "ログイン", new_user_session_path, class: "login" %></li>
