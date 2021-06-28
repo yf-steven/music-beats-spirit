@@ -27,7 +27,7 @@
 
    <% if user_signed_in? && @report.user.id == current_user.id %>
      <%= link_to "レポートの編集", edit_report_path(@report.id), class: "report-edit-btn" %>
-     <%= link_to "レポートの削除", "#", class: "report-delete-btn" %>
+     <%= link_to "レポートの削除", report_path(@report.id), method: :delete, data: {confirm: "削除しますか？"}, class: "report-delete-btn" %>
    <% end %>
 
    <%= link_to "戻る", :back, class: "show-back-btn" %>
