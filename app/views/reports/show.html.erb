@@ -26,7 +26,7 @@
    </div>
 
    <% if user_signed_in? && @report.user.id == current_user.id %>
-     <%= link_to "レポートの編集", "#", class: "report-edit-btn" %>
+     <%= link_to "レポートの編集", edit_report_path(@report.id), class: "report-edit-btn" %>
      <%= link_to "レポートの削除", "#", class: "report-delete-btn" %>
    <% end %>
 
