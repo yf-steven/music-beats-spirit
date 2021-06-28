@@ -1,5 +1,6 @@
 class ReportsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :report_find, only: [:show, :edit, :update]
 
   def index
     @reports = Report.includes(:user).order(created_at: "DESC")
@@ -19,13 +20,27 @@ class ReportsController < ApplicationController
   end
 
   def show
-    @report = Report.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    if @report.update(report_params)
+      redirect_to root_path
+    else
+      render :edit
+    end    
   end
 
   private
 
   def report_params
     params.require(:report).permit(:title, :text, :recommend).merge(user_id: current_user.id)
+  end
+
+  def report_find
+    @report = Report.find(params[:id])    
   end
   
 end
