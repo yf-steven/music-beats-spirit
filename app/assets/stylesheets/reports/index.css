@@ -61,6 +61,10 @@
   padding: 20px;
   border-radius: 5%;
 }
+.report-btn:hover{
+  filter:alpha(opacity=80); /* IE向けに透過率80%を指定 */
+  opacity:0.8; /* 透過率80%を指定 */
+}
 .report-btn-text{
   font-family: 'arial unicode ms';
 }

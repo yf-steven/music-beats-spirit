@@ -92,3 +92,17 @@
   text-align: center;
   padding: 10px;
 }
+.user-submit-btn:hover{
+  filter:alpha(opacity=80); /* IE向けに透過率80%を指定 */
+  opacity:0.8; /* 透過率80%を指定 */
+}
+.user-submit-btn:active {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+.login-message{
+  text-align: center;
+  color: red;
+  margin-bottom: 15px;
+}

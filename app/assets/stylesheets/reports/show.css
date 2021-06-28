@@ -71,24 +71,54 @@
   margin: 30px 0 10px 0;
   font-size: 18px;
 }
-.report-edit{
+.report-edit-btn{
   margin: 10px 0 5px 0;
   padding: 15px 60px;
   background-color: #00FF00;
   color: #FFF;
+  font-weight: bold;
   cursor: pointer;
 }
-.report-delete{
+.report-edit-btn:hover{
+  filter:alpha(opacity=80); /* IE向けに透過率80%を指定 */
+  opacity:0.8; /* 透過率80%を指定 */
+}
+.report-edit-btn:active {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+.report-delete-btn{
   margin: 10px 0;
   padding: 15px 60px;
   background-color: #FF0000;
   color: #FFF;
+  font-weight: bold;
   cursor: pointer;
+}
+.report-delete-btn:hover{
+  filter:alpha(opacity=80); /* IE向けに透過率80%を指定 */
+  opacity:0.8; /* 透過率80%を指定 */
+}
+.report-delete-btn:active {
+  position: relative;
+  top: 2px;
+  left: 2px;
 }
 .show-back-btn{
   margin: 30px 0 10px 0;
   padding: 15px 60px;
   background-color: #999999;
   color: #FFF;
+  font-weight: bold;
   cursor: pointer !important;
+}
+.show-back-btn:hover{
+  filter:alpha(opacity=80); /* IE向けに透過率80%を指定 */
+  opacity:0.8; /* 透過率80%を指定 */
+}
+.show-back-btn:active {
+  position: relative;
+  top: 2px;
+  left: 2px;
 }

@@ -5,12 +5,16 @@
    <div class="form-header">
     <h1 class="form-user-subject">ユーザー情報入力</h1>
    </div>
+   <div class="login-message">
+    <%= flash[:notice] %>
+    <%= flash[:alert] %>
+   </div>
    <div class="form-field">
     <div class="form-wrap">
      <label class="form-text">メールアドレス</label>
      <span class="indispensable">必須</span>
     </div>
-    <%= f.email_field :email, class: "form-input", placeholder:"PC・携帯どちらでも可" %>
+    <%= f.email_field :email, class: "form-input", placeholder:"PC・携帯どちらでも可", autofocus:true %>
    </div>
    <div class="form-field">
     <div class="form-wrap">

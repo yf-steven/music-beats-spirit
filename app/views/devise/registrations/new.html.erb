@@ -13,14 +13,14 @@
     <label class="form-text">ニックネーム</label>
     <span class="indispensable">必須</span>
    </div>
-    <%= f.text_field :nickname, class: "form-input", placeholder:"例) ライブ太郎", maxlength:"30" %>
+    <%= f.text_field :nickname, class: "form-input", autofocus:true, placeholder:"例) ライブ太郎", maxlength:"30" %>
   </div>
   <div class="form-field">
    <div class="form-wrap">
     <label class="form-text">メールアドレス</label>
     <span class="indispensable">必須</span>
    </div>
-   <%= f.email_field :email, class: "form-input", autofocus: true, placeholder:"PC・携帯どちらかでも可" %>
+   <%= f.email_field :email, class: "form-input", placeholder:"PC・携帯どちらかでも可" %>
   </div>
   <div class="form-field">
    <div class="form-wrap">

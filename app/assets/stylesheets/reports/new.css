@@ -56,6 +56,15 @@
   text-align: center;
   padding: 10px 0;
 }
+.report-send-btn:hover{
+  filter:alpha(opacity=80); /* IE向けに透過率80%を指定 */
+  opacity:0.8; /* 透過率80%を指定 */
+}
+.report-send-btn:active {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
 .back-btn{
   background-color: #999999;
   color: #F5F5F5;
@@ -64,4 +73,13 @@
   text-align: center;
   margin: 10px 0;
   padding: 10px 0;
+}
+.back-btn:hover{
+  filter:alpha(opacity=80); /* IE向けに透過率80%を指定 */
+  opacity:0.8; /* 透過率80%を指定 */
+}
+.back-btn:active {
+  position: relative;
+  top: 2px;
+  left: 2px;
 }
