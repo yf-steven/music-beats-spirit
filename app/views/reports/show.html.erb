@@ -1,0 +1,39 @@
+<%= render "shared/second-header" %>
+
+<div class="report-show">
+  <div class="report-box">
+    <h3 class="ribbon8">タイトル</h3>
+    <span class="show-title">
+     <%= @report.title %>
+    </span>
+   <div class="show-text-box">
+    <h3 class="ribbon8">テキスト</h3>
+    <span class="show-text">
+      <%= @report.text %>
+    </span>
+   </div>
+   <div class="show-recommend-box">
+    <h3 class="ribbon8">オススメポイント</h3>
+    <span class="show-recommend">
+      <%= @report.recommend %>
+    </span>
+   </div>
+   <div class="show-user-box">
+    <h3 class="ribbon8">投稿者</h3>
+    <span class="show-nickname">
+      <%= @report.user.nickname %>
+    </span>
+   </div>
+
+   <% if user_signed_in? && @report.user.id == current_user.id %>
+     <%= link_to "レポートの編集", "#", class: "report-edit" %>
+     <%= link_to "レポートの削除", "#", class: "report-delete" %>
+   <% end %>
+
+   <%= link_to "戻る", :back, class: "show-back-btn" %>
+   
+  </div>
+</div>
+
+
+<%= render "shared/footer" %>

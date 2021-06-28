@@ -40,7 +40,7 @@
   <% if @reports.present? %>
    <% @reports.each do |report| %>
     <li class="list">
-     <%= link_to "#" do %>
+     <%= link_to report_path(report.id) do %>
      <div class="reports-user-nickname">
       <h3 class="user-nickname">
        <%= report.user.nickname %>

@@ -1,0 +1,94 @@
+.report-show{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+.report-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+  width: 70vw;
+}
+.ribbon8 {
+  display: inline-block;
+  position: relative;
+  padding: 15px 20px;
+  font-size: 16px;/*フォントサイズ*/
+  color: #FFF;/*フォントカラー*/
+  background: #a6d3c8;/*背景色*/
+}
+.ribbon8:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px rgb(149, 158, 155);/*折り返し部分*/
+}
+.ribbon8:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  right: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-left: solid 20px rgb(149, 158, 155);/*折り返し部分*/
+}
+.show-title{
+  text-align: center;
+  margin: 30px 0 10px 0;
+  font-size: 24px;
+}
+.show-text-box{
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  overflow-wrap: anywhere;
+}
+.show-text{
+  font-size: 18px;
+  margin: 30px 0 10px 0;
+}
+.show-recommend-box{
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+.show-recommend{
+  text-align: center;
+  font-size: 18px;
+  margin: 30px 0 10px 0;
+}
+.show-user-box{
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+.show-nickname{
+  margin: 30px 0 10px 0;
+  font-size: 18px;
+}
+.report-edit{
+  margin: 10px 0 5px 0;
+  padding: 15px 60px;
+  background-color: #00FF00;
+  color: #FFF;
+  cursor: pointer;
+}
+.report-delete{
+  margin: 10px 0;
+  padding: 15px 60px;
+  background-color: #FF0000;
+  color: #FFF;
+  cursor: pointer;
+}
+.show-back-btn{
+  margin: 30px 0 10px 0;
+  padding: 15px 60px;
+  background-color: #999999;
+  color: #FFF;
+  cursor: pointer !important;
+}
