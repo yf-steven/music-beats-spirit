@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    attributes:
+     user:
+      nickname: ニックネーム
+      sex_id: 性別
+      age_id: 年齢層
+     report:
+       title: タイトル
+       text: 本文
