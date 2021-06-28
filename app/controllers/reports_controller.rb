@@ -1,6 +1,6 @@
 class ReportsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :report_find, only: [:show, :edit, :update]
+  before_action :report_find, only: [:show, :edit, :update, :destroy]
 
   def index
     @reports = Report.includes(:user).order(created_at: "DESC")
@@ -31,6 +31,14 @@ class ReportsController < ApplicationController
     else
       render :edit
     end    
+  end
+
+  def destroy
+    if @report.destroy
+     redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   private
