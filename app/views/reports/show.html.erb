@@ -21,16 +21,16 @@
    <div class="show-user-box">
     <h3 class="ribbon8">投稿者</h3>
     <span class="show-nickname">
-      <%= @report.user.nickname %>
+      <%= link_to @report.user.nickname, user_path(@report.user.id) %>
     </span>
    </div>
 
    <% if user_signed_in? && @report.user.id == current_user.id %>
-     <%= link_to "レポートの編集", edit_report_path(@report.id), class: "report-edit-btn" %>
-     <%= link_to "レポートの削除", report_path(@report.id), method: :delete, data: {confirm: "削除しますか？"}, class: "report-delete-btn" %>
+     <%= link_to "レポートの編集", edit_report_path(@report.id), class: "edit-btn" %>
+     <%= link_to "レポートの削除", report_path(@report.id), method: :delete, data: {confirm: "削除しますか？"}, class: "delete-btn" %>
    <% end %>
 
-   <%= link_to "戻る", :back, class: "show-back-btn" %>
+   <%= link_to "戻る", root_path, class: "back-btn" %>
    
   </div>
 </div>

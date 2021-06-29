@@ -1,0 +1,29 @@
+.user-show{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.user-info-contents{
+  margin: 35px 0;
+  font-size: 18px;
+}
+.user-info-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-report-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.user-report-field{
+  margin: 10px 0;
+}
