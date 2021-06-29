@@ -1,0 +1,54 @@
+<%= render "shared/second-header" %>
+
+<div class="user-show">
+  <div class="user-box">
+   <div class="user-info-box">
+    <h3 class="ribbon8">ニックネーム</h3>
+    <span class="user-info-contents">
+     <%= @user.nickname %>
+    </span>
+   </div>
+   <div class="user-info-box">
+    <h3 class="ribbon8">自己紹介</h3>
+    <span class="user-info-contents">
+      <%= @user.introduce %>
+    </span>
+   </div>
+   <div class="user-info-box">
+    <h3 class="ribbon8">お気に入りアーティスト</h3>
+    <span class="user-info-contents">
+      <%= @user.favorite %>
+    </span>
+   </div>   
+   <% if user_signed_in? && @user.id == current_user.id %>
+     <%= link_to "ユーザー情報の編集", edit_user_registration_path(@user.id), class: "edit-btn" %>
+     <%= link_to "ユーザー情報の削除", user_path(@user.id), method: :delete, data: {confirm: "削除しますか？"}, class: "delete-btn" %>
+   <% end %>
+
+   <div class="user-report-index">
+    <h3 class="ribbon8">投稿レポート一覧</h3>
+    <ul class="user-report-box">
+     <% @reports.each do |report| %>
+     <li class="user-report-field">
+      <%= link_to report_path(report.id) do %>
+      <div class="user-report-title-box">
+       <span class="user-report-title">
+        <%= report.title %>
+       </span>
+      </div>
+      <% end %>
+     </li>
+     <% end %>
+    </ul>
+   </div>
+   
+   <% if request.referer&.include?("/reports/") %>
+    <%= link_to "戻る", :back, class: "back-btn" %>
+   <% else %>
+    <%= link_to "戻る", root_path, class: "back-btn" %>
+   <% end %>   
+  </div>
+</div>
+
+
+<%= render "shared/footer" %>

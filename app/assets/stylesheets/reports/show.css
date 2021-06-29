@@ -15,9 +15,9 @@
   display: inline-block;
   position: relative;
   padding: 15px 20px;
-  font-size: 16px;/*フォントサイズ*/
-  color: #FFF;/*フォントカラー*/
-  background: #a6d3c8;/*背景色*/
+  font-size: 16px;
+  color: #FFF;
+  background: #a6d3c8;
 }
 .ribbon8:before {
   position: absolute;
@@ -26,7 +26,7 @@
   left: 0;
   border: none;
   border-bottom: solid 15px transparent;
-  border-right: solid 20px rgb(149, 158, 155);/*折り返し部分*/
+  border-right: solid 20px rgb(149, 158, 155);
 }
 .ribbon8:after {
   position: absolute;
@@ -35,7 +35,7 @@
   right: 0;
   border: none;
   border-bottom: solid 15px transparent;
-  border-left: solid 20px rgb(149, 158, 155);/*折り返し部分*/
+  border-left: solid 20px rgb(149, 158, 155);
 }
 .show-title{
   text-align: center;
@@ -71,7 +71,7 @@
   margin: 30px 0 10px 0;
   font-size: 18px;
 }
-.report-edit-btn{
+.edit-btn{
   margin: 10px 0 5px 0;
   padding: 15px 60px;
   background-color: #00FF00;
@@ -79,45 +79,45 @@
   font-weight: bold;
   cursor: pointer;
 }
-.report-edit-btn:hover{
-  filter:alpha(opacity=80); /* IE向けに透過率80%を指定 */
-  opacity:0.8; /* 透過率80%を指定 */
+.edit-btn:hover{
+  filter:alpha(opacity=80); 
+  opacity:0.8; 
 }
-.report-edit-btn:active {
+.edit-btn:active {
   position: relative;
   top: 2px;
   left: 2px;
 }
-.report-delete-btn{
-  margin: 10px 0;
+.delete-btn{
+  margin: 20px 0 30px 0;
   padding: 15px 60px;
   background-color: #FF0000;
   color: #FFF;
   font-weight: bold;
   cursor: pointer;
 }
-.report-delete-btn:hover{
-  filter:alpha(opacity=80); /* IE向けに透過率80%を指定 */
-  opacity:0.8; /* 透過率80%を指定 */
+.delete-btn:hover{
+  filter:alpha(opacity=80); 
+  opacity:0.8; 
 }
-.report-delete-btn:active {
+.delete-btn:active {
   position: relative;
   top: 2px;
   left: 2px;
 }
-.show-back-btn{
+.back-btn{
   margin: 30px 0 10px 0;
-  padding: 15px 60px;
+  padding: 10px 50px;
   background-color: #999999;
   color: #FFF;
   font-weight: bold;
   cursor: pointer !important;
 }
-.show-back-btn:hover{
-  filter:alpha(opacity=80); /* IE向けに透過率80%を指定 */
-  opacity:0.8; /* 透過率80%を指定 */
+.back-btn:hover{
+  filter:alpha(opacity=80); 
+  opacity:0.8; 
 }
-.show-back-btn:active {
+.back-btn:active {
   position: relative;
   top: 2px;
   left: 2px;
