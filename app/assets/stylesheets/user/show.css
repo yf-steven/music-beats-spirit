@@ -27,3 +27,6 @@
 .user-report-field{
   margin: 10px 0;
 }
+.user-report-title{
+  border-bottom: 1px solid black;
+}

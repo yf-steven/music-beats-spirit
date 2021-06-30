@@ -18,6 +18,7 @@
   font-size: 16px;
   color: #FFF;
   background: #a6d3c8;
+  text-align: center;
 }
 .ribbon8:before {
   position: absolute;
@@ -70,6 +71,7 @@
 .show-nickname{
   margin: 30px 0 10px 0;
   font-size: 18px;
+  border-bottom: 1px black solid;
 }
 .edit-btn{
   margin: 10px 0 5px 0;
