@@ -11,6 +11,8 @@ module MusicBeatsSpirit
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
+    config.action_view.field_error_proc = Proc.new { |html_tag, instance| html_tag }
+
     # 日本語の言語設定
     config.i18n.default_locale = :ja
 
