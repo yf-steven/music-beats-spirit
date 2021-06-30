@@ -22,7 +22,7 @@
    </div>   
    <% if user_signed_in? && @user.id == current_user.id %>
      <%= link_to "ユーザー情報の編集", edit_user_registration_path(@user.id), class: "edit-btn" %>
-     <%= link_to "ユーザー情報の削除", user_path(@user.id), method: :delete, data: {confirm: "削除しますか？"}, class: "delete-btn" %>
+     <%= link_to "ユーザー情報の削除", user_path(@user.id), method: :delete, data: {confirm: "削除すると復元できません。本当に削除しますか？"}, class: "delete-btn" %>
    <% end %>
 
    <div class="user-report-index">

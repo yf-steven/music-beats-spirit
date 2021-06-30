@@ -1,8 +1,22 @@
 class UsersController < ApplicationController
+  before_action :find_user, only: [:show, :destroy]
 
   def show
-    @user = User.find(params[:id])
     @reports = Report.where(user_id: @user.id).includes(:user)
+  end
+
+  def destroy
+    if @user.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
+  end
+
+  private
+
+  def find_user
+    @user = User.find(params[:id])
   end
   
 end
