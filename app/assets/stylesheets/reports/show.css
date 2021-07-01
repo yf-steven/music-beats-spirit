@@ -76,7 +76,7 @@
 .edit-btn{
   margin: 10px 0 5px 0;
   padding: 15px 60px;
-  background-color: #00FF00;
+  background-color: #006400;
   color: #FFF;
   font-weight: bold;
   cursor: pointer;
@@ -106,6 +106,53 @@
   position: relative;
   top: 2px;
   left: 2px;
+}
+.comment-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.comment-input{
+  resize: none;
+  border: 1px solid lightgray;
+  height: 25vh;
+  width: 25vw;
+}
+.comment-warn{
+  margin-top: 10px;
+}
+.comment-send-btn{
+  background-color: #FF0000;
+  color: #FFF;
+  margin-top: 20px;
+  padding: 10px 60px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.comment-send-btn:hover{
+  filter:alpha(opacity=80); 
+  opacity:0.8;
+}
+.comment-send-btn:active{
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+.comment-no-login{
+  margin-top: 30px;
+  text-align: center;
+}
+.report-comment-box{
+  margin-top: 20px;
+}
+.comment-field{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.comment-content{
+  margin: 10px 0;
 }
 .back-btn{
   margin: 30px 0 10px 0;
