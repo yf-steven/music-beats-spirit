@@ -8,3 +8,5 @@ ja:
      report:
        title: タイトル
        text: 本文
+     comment:
+       text: コメント

@@ -6,5 +6,6 @@ class Report < ApplicationRecord
   end
 
   belongs_to :user
+  has_many :comments
 
 end

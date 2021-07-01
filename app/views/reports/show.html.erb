@@ -26,9 +26,38 @@
    </div>
 
    <% if user_signed_in? && @report.user.id == current_user.id %>
-     <%= link_to "レポートの編集", edit_report_path(@report.id), class: "edit-btn" %>
-     <%= link_to "レポートの削除", report_path(@report.id), method: :delete, data: {confirm: "削除しますか？"}, class: "delete-btn" %>
+      <%= link_to "レポートの編集", edit_report_path(@report.id), class: "edit-btn" %>
+      <%= link_to "レポートの削除", report_path(@report.id), method: :delete, data: {confirm: "削除しますか？"}, class: "delete-btn" %>
    <% end %>
+   <h3 class="ribbon8">コメント</h3>
+   <% if user_signed_in? %>
+     <%= form_with model: [@report, @comment], class: "comment-form", local: true do |f| %>
+
+     <%= render 'shared/error-messages', model: f.object %>
+
+      <%= f.text_area :text, placeholder:"コメントの記入(400字まで)", maxlength:"400", class:"comment-input" %>
+      <p class="comment-warn">
+       ※ 相手に配慮した丁寧なコメントをしましょう
+      </p>
+      <%= f.submit "コメントを送信する", class:"comment-send-btn" %>
+     <% end %>
+   <% else %>
+     <p class="comment-no-login">
+      ※ コメントするにはユーザー登録とログインが必要です ※
+     </p>
+   <% end %>
+   <ul class="report-comment-box">
+    <% @comments.each do |comment| %>
+    <li class="comment-field">
+     <span class="comment-content">
+      <%= comment.user.nickname %>
+     </span>
+     <span class="comment-content">
+      <%= comment.text %>
+     </span>
+    </li>
+    <% end %>
+   </ul>
 
    <%= link_to "戻る", root_path, class: "back-btn" %>
    

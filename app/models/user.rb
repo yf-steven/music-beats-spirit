@@ -23,6 +23,7 @@ class User < ApplicationRecord
   validates :age_id, numericality: { other_than: 1 }
 
   has_many :reports, :dependent => :destroy
+  has_many :comments, :dependent => :destroy
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :sex

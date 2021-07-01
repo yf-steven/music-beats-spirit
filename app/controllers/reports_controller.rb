@@ -20,6 +20,8 @@ class ReportsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = Comment.includes(:user)
   end
 
   def edit
