@@ -151,7 +151,11 @@
   flex-direction: column;
   align-items: center;
 }
-.comment-content{
+.comment-user{
+  margin: 10px 0;
+  border-bottom: 1px solid black;
+}
+.comment-text{
   margin: 10px 0;
 }
 .back-btn{

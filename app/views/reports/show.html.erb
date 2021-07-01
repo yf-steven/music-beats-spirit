@@ -49,17 +49,21 @@
    <ul class="report-comment-box">
     <% @comments.each do |comment| %>
     <li class="comment-field">
-     <span class="comment-content">
-      <%= comment.user.nickname %>
+     <span class="comment-user">
+      <%= link_to comment.user.nickname, user_path(comment.user.id) %>
      </span>
-     <span class="comment-content">
+     <span class="comment-text">
       <%= comment.text %>
      </span>
     </li>
     <% end %>
    </ul>
 
-   <%= link_to "戻る", root_path, class: "back-btn" %>
+   <% if request.referer&.include?("/users/") %>
+    <%= link_to "戻る", :back, class: "back-btn" %>
+   <% else%>
+    <%= link_to "戻る", root_path, class: "back-btn" %>
+   <% end %>
    
   </div>
 </div>
