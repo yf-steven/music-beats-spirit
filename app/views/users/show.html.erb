@@ -41,12 +41,6 @@
      <% end %>
     </ul>
    </div>
-   
-   <% if request.referer&.include?("/reports/") %>
-    <%= link_to "戻る", :back, class: "back-btn" %>
-   <% else %>
-    <%= link_to "戻る", root_path, class: "back-btn" %>
-   <% end %>   
   </div>
 </div>
 
