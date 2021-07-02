@@ -118,6 +118,7 @@
   border: 1px solid lightgray;
   height: 25vh;
   width: 25vw;
+  padding: 10px;
 }
 .comment-warn{
   margin-top: 10px;
@@ -157,6 +158,13 @@
 }
 .comment-text{
   margin: 10px 0;
+}
+.comment-delete-btn{
+  background-color: #FF0000;
+  color: #FFF;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
 }
 .back-btn{
   margin: 30px 0 10px 0;

@@ -55,6 +55,9 @@
      <span class="comment-text">
       <%= comment.text %>
      </span>
+     <% if user_signed_in? && comment.user.id == current_user.id %>
+       <%= link_to "コメントを削除する", report_comment_path(comment.report.id, comment.id), method: :delete, data: {confirm: "コメントを削除しますか？"}, class:"comment-delete-btn" %>
+     <% end %>
     </li>
     <% end %>
    </ul>
