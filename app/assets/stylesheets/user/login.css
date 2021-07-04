@@ -57,8 +57,8 @@
 .form-input{
   width: 70%;
   margin: 10px 0;
-  padding: 10px 0;
-  border: 1px solid #333333;
+  padding: 10px 10px;
+  border: 1px solid lightgray;
   resize: none;
 }
 .form-info{
@@ -70,8 +70,9 @@
   text-align: center;
   width: 100px;
   height: 30px;
-  border: 1px solid #333333;
+  border: 1px solid black;
   margin: 10px 0;
+  padding: 0 10px;
 }
 .form-submit{
   display: flex;

@@ -25,7 +25,7 @@
      <%= link_to "ユーザー情報の削除", user_path(@user.id), method: :delete, data: {confirm: "削除すると復元できません。本当に削除しますか？"}, class: "delete-btn" %>
    <% end %>
 
-   <div class="user-report-index">
+   <div class="user-info-box">
     <h3 class="ribbon8">投稿レポート一覧</h3>
     <ul class="user-report-box">
      <% @reports.each do |report| %>
