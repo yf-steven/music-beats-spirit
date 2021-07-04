@@ -26,6 +26,12 @@ ActiveRecord::Schema.define(version: 2021_06_30_092157) do
     t.string "title", null: false
     t.text "text", null: false
     t.text "recommend"
+    t.float "violent", null: false
+    t.text "violent_reason"
+    t.float "with_family", null: false
+    t.text "with_family_reason"
+    t.float "preparation", null: false
+    t.text "preparation_reason"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
