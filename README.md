@@ -2,7 +2,7 @@
 
 # 名称
 
-**music beats spirit**
+**MUSIC BEATS SPIRIT**
 
 # 概要
 
