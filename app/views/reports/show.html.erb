@@ -18,6 +18,31 @@
       <%= @report.recommend %>
     </span>
    </div>
+   <div class="show-rate-box">
+    <h3 class="ribbon8">ライブの評価</h3>
+    <span class="rate-contents">ライブの激しさ</span>
+    <div class="show-rate" id="star-violent-<%= @report.id %>"></div>
+   </div>
+   <div class="reason-box">
+     <%= @report.violent_reason %>
+   </div>
+   <div class="show-rate-box">
+    <span class="rate-contents">女性・家族連れの方へのオススメ度</span>
+    <div class="show-rate" id="star-with_family-<%= @report.id %>"></div>
+   </div>
+   <div class="reason-box">
+     <%= @report.with_family_reason %>
+   </div>   
+   <div class="show-rate-box">
+    <span class="rate-contents">ライブの予習必要度</span>
+    <div class="show-rate" id="star-preparation-<%= @report.id %>"></div>
+   </div>
+   <div class="reason-box">
+     <%= @report.preparation_reason %>
+   </div>
+
+   <%= render "shared/rate-show" %>
+
    <div class="show-user-box">
     <h3 class="ribbon8">投稿者</h3>
     <span class="show-nickname">

@@ -66,6 +66,20 @@
   font-size: 18px;
   margin: 30px 0 10px 0;
 }
+.show-rate-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.rate-contents{
+  margin: 20px 0 10px 0;
+  font-size: 18px;
+}
+.reason-box{
+  margin-top: 15px;
+  font-size: 18px;
+}
 .show-user-box{
   display: flex;
   flex-direction: column;
