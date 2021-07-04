@@ -44,23 +44,23 @@
 
 **ユーザー登録機能**
 
-![ユーザー登録](https://gyazo.com/c9e67ffdbd1735a3872870b35022ea6a)
+[ユーザー登録](https://gyazo.com/c9e67ffdbd1735a3872870b35022ea6a)
 
 **ユーザー詳細・編集・削除機能**
 
-![ユーザー詳細・編集・削除機能](https://gyazo.com/350af313b569e5ea1ac2c727dc0aa728)
+[ユーザー詳細・編集・削除機能](https://gyazo.com/350af313b569e5ea1ac2c727dc0aa728)
 
 **レポート投稿・一覧表示機能**
 
-![レポート投稿・一覧表示機能](https://gyazo.com/8d190adb2c9b7ca3ee10cbe4f3304288)
+[レポート投稿・一覧表示機能](https://gyazo.com/8d190adb2c9b7ca3ee10cbe4f3304288)
 
 **レポート詳細・編集・削除機能**
 
-![レポート詳細・編集・削除機能](https://gyazo.com/02c40f88497a6589be2f925460c72737)
+[レポート詳細・編集・削除機能](https://gyazo.com/02c40f88497a6589be2f925460c72737)
 
 **コメント投稿・表示機能・削除機能**
 
-![コメント投稿・表示・削除機能](https://gyazo.com/21a6f0f1012b039e62b804d74f6a22d1)
+[コメント投稿・表示・削除機能](https://gyazo.com/21a6f0f1012b039e62b804d74f6a22d1)
 
 # 実装予定の機能
 
