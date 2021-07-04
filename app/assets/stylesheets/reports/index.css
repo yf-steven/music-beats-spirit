@@ -51,7 +51,9 @@
 }
 .user-nickname, .title{
   font-size: 20px;
-  border-bottom: 1px solid black;
+}
+.user-nickname{
+  text-align: center;
 }
 .report-btn{
   position: fixed;

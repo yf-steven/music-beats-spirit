@@ -33,43 +33,43 @@
      <label class="form-text">このライブの激しさ</label>
      <span class="indispensable">必須</span>
     </div>
-    <div class="rate-form-field" id="star1">
+    <div class="rate-form-field">
      <%= f.label :violent, "評価", class: "violent" %>
-     <%#= f.hidden_field :violent, id: :violent_star %>
+     <div class="rate-detail" id="edit-violent-<%= @report.id %>"></div>
     </div>
-    <div class="report-form-field">
+   <div class="report-form-field">
     <div class="report-form-wrap">
      <label class="form-text">理由</label>
      <span class="indispensable" style="color: black;">任意</span>
     </div>
     <%= f.text_area :violent_reason, class:"report-short", placeholder:"理由(100文字まで)", maxlength:"100" %>
    </div>
-    <div class="report-rate-form">
+   <div class="report-rate-form">
     <div class="report-form-wrap">
      <label class="form-text">女性、家族連れの方へのオススメ度</label>
      <span class="indispensable">必須</span>
     </div>
-    <div class="rate-form-field" id="star2">
+    <div class="rate-form-field">
      <%= f.label :with_family, "評価", class: "with-family" %>
-     <%#= f.hidden_field :violent, id: :family_star %>
+     <div class="rate-detail" id="edit-with_family-<%= @report.id %>"></div>
     </div>
-    <div class="report-form-field">
+   <div class="report-form-field">
     <div class="report-form-wrap">
      <label class="form-text">理由</label>
      <span class="indispensable" style="color: black;">任意</span>
     </div>
     <%= f.text_area :with_family_reason, class:"report-short", placeholder:"理由(100文字まで)", maxlength:"100" %>
    </div>
-    <div class="report-rate-form">
+   <div class="report-rate-form">
     <div class="report-form-wrap">
      <label class="form-text">ライブの予習必要度</label>
      <span class="indispensable">必須</span>
     </div>
-    <div class="rate-form-field" id="star3">
+    <div class="rate-edit-field">
      <%= f.label :preparation, "評価", class: "preparation" %>
-     <%#= f.hidden_field :violent, id: :preparation_star %>
+     <div class="rate-detail" id="edit-preparation-<%= @report.id %>"></div>
     </div>
-    <div class="report-form-field">
+   <div class="report-edit-field">
     <div class="report-form-wrap">
      <label class="form-text">理由</label>
      <span class="indispensable" style="color: black;">任意</span>
@@ -77,7 +77,8 @@
     <%= f.text_area :preparation_reason, class:"report-short", placeholder:"理由(100文字まで)", maxlength:"100" %>
    </div>
 
-    <%= render 'shared/rate-new' %>
+   <%= render 'shared/rate-edit' %>
+
    <div class="report-form-submit">
     <%= f.submit "変更する", class:"report-send-btn" %>
    </div>
