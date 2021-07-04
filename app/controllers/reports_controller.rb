@@ -29,7 +29,7 @@ class ReportsController < ApplicationController
 
   def update
     if @report.update(report_params)
-      redirect_to root_path
+      redirect_to report_path(@report.id)
     else
       render :edit
     end    

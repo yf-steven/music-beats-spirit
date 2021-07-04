@@ -57,6 +57,12 @@
 .rate-form-field{
   margin-top: 10px;
 }
+.rate-edit-field{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .report-form-submit{
   display: flex;
   flex-direction: column;
