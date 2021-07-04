@@ -18,7 +18,7 @@
 
 # URL
 
-[music beats spirit](https://music-beats-spirit.herokuapp.com/)
+[MUSIC BEATS SPIRIT](https://music-beats-spirit.herokuapp.com/)
 
 # 利用方法
 
