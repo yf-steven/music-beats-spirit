@@ -22,31 +22,46 @@
 .report-form-field{
   margin: 10px 0;
 }
+.report-form-wrap{
+  display: flex;
+  justify-content: center;
+}
 .report-title{
   margin: 10px 0;
-  border: 1px solid black;
+  border: 1px solid lightgray;
   padding: 10px;
   width: 400px;
 }
 .report-text{
   resize: none;
   margin: 10px 0;
-  border: 1px solid black;
+  border: 1px solid lightgray;
   width: 400px;
   height: 500px;
+  padding: 10px 10px;
 }
-.report-recommend{
+.report-short{
   resize: none;
   margin: 10px 0;
-  border: 1px solid black;
+  border: 1px solid lightgray;
   width: 400px;
   height: 80px;
+  padding: 10px 10px;
+}
+.report-rate-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+.rate-form-field{
+  margin-top: 10px;
 }
 .report-form-submit{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 .report-send-btn{
   background-color: #FF0000;
@@ -57,28 +72,10 @@
   padding: 10px 0;
 }
 .report-send-btn:hover{
-  filter:alpha(opacity=80); /* IE向けに透過率80%を指定 */
-  opacity:0.8; /* 透過率80%を指定 */
+  filter:alpha(opacity=80); 
+  opacity:0.8; 
 }
 .report-send-btn:active {
-  position: relative;
-  top: 2px;
-  left: 2px;
-}
-.back-btn{
-  background-color: #999999;
-  color: #F5F5F5;
-  font-weight: bold;
-  width: 150px;
-  text-align: center;
-  margin: 10px 0;
-  padding: 10px 0;
-}
-.back-btn:hover{
-  filter:alpha(opacity=80); /* IE向けに透過率80%を指定 */
-  opacity:0.8; /* 透過率80%を指定 */
-}
-.back-btn:active {
   position: relative;
   top: 2px;
   left: 2px;

@@ -8,5 +8,8 @@ ja:
      report:
        title: タイトル
        text: 本文
+       violent: 激しさ
+       with_family: 家族向け
+       preparation: 予習必要度
      comment:
        text: コメント

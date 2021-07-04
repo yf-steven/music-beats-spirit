@@ -60,12 +60,15 @@
 
 ## reportテーブル
 
-|   column  |     type   |      options     |
-| --------- | ---------- | ---------------- |
-|   title   |   string   |    null:false    |
-|    text   |    text    |    null:false    |
-| recommend |    text    | ---------------- |
-|    user   | references | foreign_key:true |
+|    column   |     type   |      options     |
+| ----------- | ---------- | ---------------- |
+|    title    |   string   |    null:false    |
+|     text    |    text    |    null:false    |
+|  recommend  |    text    | ---------------- |
+|   violent   |    float   |    null:false    |
+| with_family |    float   |    null:false    |
+| preparation |    float   |    null:false    |
+|     user    | references | foreign_key:true |
 
 ### association
 
