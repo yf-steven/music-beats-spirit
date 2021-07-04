@@ -1,0 +1,33 @@
+<script>
+  $('#star-violent-<%= @report.id %>').raty ({
+    size: 38,
+    starOff: '<%= asset_path('star-off.png') %>',
+    starOn: '<%= asset_path('star-on.png') %>',
+    starHalf: '<%= asset_path('star-half.png') %>',
+    half: true,
+    readOnly: true,
+    score: <%= @report.violent %>,
+  });
+</script>
+<script>
+  $('#star-with_family-<%= @report.id %>').raty ({
+    size: 38,
+    starOff: '<%= asset_path('star-off.png') %>',
+    starOn: '<%= asset_path('star-on.png') %>',
+    starHalf: '<%= asset_path('star-half.png') %>',
+    half: true,
+    readOnly: true,
+    score: <%= @report.with_family %>,
+  });
+</script>
+<script>
+  $('#star-preparation-<%= @report.id %>').raty ({
+    size: 38,
+    starOff: '<%= asset_path('star-off.png') %>',
+    starOn: '<%= asset_path('star-on.png') %>',
+    starHalf: '<%= asset_path('star-half.png') %>',
+    half: true,
+    readOnly: true,
+    score: <%= @report.preparation %>,
+  });
+</script>
