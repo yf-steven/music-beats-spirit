@@ -55,6 +55,15 @@
 .user-nickname{
   text-align: center;
 }
+.report-none-message{
+  text-align: center;
+  font-size: 18px;
+}
+.none-report-picture{
+  margin: 15px 0 20px 0;
+  height: 200px;
+  width: 400px;
+}
 .report-btn{
   position: fixed;
   right: 30px ;

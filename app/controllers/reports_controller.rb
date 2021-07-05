@@ -21,7 +21,7 @@ class ReportsController < ApplicationController
 
   def show
     @comment = Comment.new
-    @comments = Comment.includes(:user)
+    @comments = Comment.includes(:user).order(created_at: "DESC")
   end
 
   def edit
