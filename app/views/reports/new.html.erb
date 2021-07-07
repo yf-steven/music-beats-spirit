@@ -7,82 +7,90 @@
 
    <%= render 'shared/error-messages', model: f.object %>
 
-   <div class="report-form-feild">
-    <div class="report-form-wrap">
-     <label class="form-text">タイトル</label>
-     <span class="indispensable">必須</span>
+    <div class="report-form-feild">
+      <div class="report-form-wrap">
+      <label class="form-text">タイトル</label>
+      <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_field :title, class:"report-title", autofocus: true, placeholder: "レポートのタイトル(40文字まで)", maxlength:"40" %>
     </div>
-    <%= f.text_field :title, class:"report-title", autofocus:true, placeholder:"レポートのタイトル(40文字まで)", maxlength:"40" %>
-   </div>
-   <div class="report-form-field">
-    <div class="report-form-wrap">
-     <label class="form-text">本文</label>
-     <span class="indispensable">必須</span>
-    </div>
-    <%= f.text_area :text, class:"report-text", placeholder:"レポート内容(800文字まで)", maxlength:"800" %>
-   </div>
-   <div class="report-form-field">
-    <div class="report-form-wrap">
-     <label class="form-text">このライブのオススメポイント</label>
-     <span class="indispensable" style="color: black;">任意</span>
-    </div>
-    <%= f.text_area :recommend, class:"report-short", placeholder:"オススメポイント(100文字まで)", maxlength:"100" %>
-   </div>
-   <div class="report-rate-form">
-    <div class="report-form-wrap">
-     <label class="form-text">このライブの激しさ</label>
-     <span class="indispensable">必須</span>
-    </div>
-    <div class="rate-form-field" id="star1">
-     <%= f.label :violent, "評価", class: "violent" %>
-     <%#= f.hidden_field :violent, id: :violent_star %>
+    <div class="report-form-feild">
+      <div class="report-form-wrap">
+      <label class="form-text">アーティスト</label>
+      <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_field :artist, class:"report-artist", placeholder: "アーティスト名(正式名称で30文字)", maxlength:"30" %>
     </div>
     <div class="report-form-field">
-    <div class="report-form-wrap">
-     <label class="form-text">理由</label>
-     <span class="indispensable" style="color: black;">任意</span>
+      <div class="report-form-wrap">
+      <label class="form-text">本文</label>
+      <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :text, class:"report-text", placeholder:"レポート内容(800文字まで)", maxlength:"800" %>
     </div>
-    <%= f.text_area :violent_reason, class:"report-short", placeholder:"理由(100文字まで)", maxlength:"100" %>
-   </div>
+    <div class="report-form-field">
+      <div class="report-form-wrap">
+      <label class="form-text">このライブのオススメポイント</label>
+      <span class="indispensable" style="color: black;">任意</span>
+      </div>
+      <%= f.text_area :recommend, class:"report-short", placeholder:"オススメポイント(100文字まで)", maxlength:"100" %>
+    </div>
     <div class="report-rate-form">
-    <div class="report-form-wrap">
-     <label class="form-text">女性、家族連れの方へのオススメ度</label>
-     <span class="indispensable">必須</span>
+      <div class="report-form-wrap">
+      <label class="form-text">このライブの激しさ</label>
+      <span class="indispensable">必須</span>
+      </div>
+      <div class="rate-form-field" id="star1">
+      <%= f.label :violent, "評価", class: "violent" %>
+      </div>
+      <div class="report-form-field">
+      <div class="report-form-wrap">
+        <label class="form-text">理由</label>
+        <span class="indispensable" style="color: black;">任意</span>
+      </div>
+      </div>
+      <%= f.text_area :violent_reason, class:"report-short", placeholder:"理由(100文字まで)", maxlength:"100" %>
     </div>
-    <div class="rate-form-field" id="star2">
-     <%= f.label :with_family, "評価", class: "with-family" %>
-     <%#= f.hidden_field :violent, id: :family_star %>
-    </div>
-    <div class="report-form-field">
-    <div class="report-form-wrap">
-     <label class="form-text">理由</label>
-     <span class="indispensable" style="color: black;">任意</span>
-    </div>
-    <%= f.text_area :with_family_reason, class:"report-short", placeholder:"理由(100文字まで)", maxlength:"100" %>
-   </div>
     <div class="report-rate-form">
-    <div class="report-form-wrap">
-     <label class="form-text">ライブの予習必要度</label>
-     <span class="indispensable">必須</span>
+      <div class="report-form-wrap">
+      <label class="form-text">女性、家族連れの方へのオススメ度</label>
+      <span class="indispensable">必須</span>
+      </div>
+      <div class="rate-form-field" id="star2">
+      <%= f.label :with_family, "評価", class: "with-family" %>
+      </div>
+      <div class="report-form-field">
+      <div class="report-form-wrap">
+        <label class="form-text">理由</label>
+        <span class="indispensable" style="color: black;">任意</span>
+      </div>
+      </div>
+      <%= f.text_area :with_family_reason, class:"report-short", placeholder:"理由(100文字まで)", maxlength:"100" %>
     </div>
-    <div class="rate-form-field" id="star3">
-     <%= f.label :preparation, "評価", class: "preparation" %>
-     <%#= f.hidden_field :violent, id: :preparation_star %>
+    <div class="report-rate-form">
+      <div class="report-form-wrap">
+      <label class="form-text">ライブの予習必要度</label>
+      <span class="indispensable">必須</span>
+      </div>
+      <div class="rate-form-field" id="star3">
+      <%= f.label :preparation, "評価", class: "preparation" %>
+      </div>
+      <div class="report-form-field">
+      <div class="report-form-wrap">
+        <label class="form-text">理由</label>
+        <span class="indispensable" style="color: black;">任意</span>
+      </div>
+      </div>
+      <%= f.text_area :preparation_reason, class:"report-short", placeholder:"理由(100文字まで)", maxlength:"100" %>
     </div>
-    <div class="report-form-field">
-    <div class="report-form-wrap">
-     <label class="form-text">理由</label>
-     <span class="indispensable" style="color: black;">任意</span>
-    </div>
-    <%= f.text_area :preparation_reason, class:"report-short", placeholder:"理由(100文字まで)", maxlength:"100" %>
-   </div>
 
-    <%= render 'shared/rate-new' %>
+      <%= render 'shared/rate-new' %>
 
-   </div>
-   <div class="report-form-submit">
-    <%= f.submit "投稿する", class:"report-send-btn" %>
-   </div>
+    <div class="report-form-submit">
+      <%= f.submit "投稿する", class:"report-send-btn" %>
+    </div>
    <% end %>
   </div> 
 </div>
+
+<%= render "shared/footer" %>

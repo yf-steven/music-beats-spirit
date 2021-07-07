@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2021_06_30_092157) do
 
   create_table "reports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
+    t.string "artist", null: false
     t.text "text", null: false
     t.text "recommend"
     t.float "violent", null: false

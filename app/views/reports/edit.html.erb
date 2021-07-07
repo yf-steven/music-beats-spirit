@@ -14,6 +14,13 @@
     </div>
     <%= f.text_field :title, class:"report-title", autofocus:true, placeholder:"レポートのタイトル(40文字まで)", maxlength:"40" %>
    </div>
+   <div class="report-form-feild">
+    <div class="report-form-wrap">
+     <label class="form-text">アーティスト</label>
+     <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :artist, class:"report-artist", placeholder: "アーティスト名(正式名称で30文字)", maxlength:"30" %>
+   </div>
    <div class="report-form-field">
     <div class="report-form-wrap">
      <label class="form-text">本文</label>
@@ -37,12 +44,13 @@
      <%= f.label :violent, "評価", class: "violent" %>
      <div class="rate-detail" id="edit-violent-<%= @report.id %>"></div>
     </div>
-   <div class="report-form-field">
-    <div class="report-form-wrap">
-     <label class="form-text">理由</label>
-     <span class="indispensable" style="color: black;">任意</span>
+    <div class="report-form-field">
+      <div class="report-form-wrap">
+      <label class="form-text">理由</label>
+      <span class="indispensable" style="color: black;">任意</span>
+      </div>
+      <%= f.text_area :violent_reason, class:"report-short", placeholder:"理由(100文字まで)", maxlength:"100" %>
     </div>
-    <%= f.text_area :violent_reason, class:"report-short", placeholder:"理由(100文字まで)", maxlength:"100" %>
    </div>
    <div class="report-rate-form">
     <div class="report-form-wrap">
@@ -53,12 +61,13 @@
      <%= f.label :with_family, "評価", class: "with-family" %>
      <div class="rate-detail" id="edit-with_family-<%= @report.id %>"></div>
     </div>
-   <div class="report-form-field">
-    <div class="report-form-wrap">
-     <label class="form-text">理由</label>
-     <span class="indispensable" style="color: black;">任意</span>
+    <div class="report-form-field">
+      <div class="report-form-wrap">
+      <label class="form-text">理由</label>
+      <span class="indispensable" style="color: black;">任意</span>
+      </div>
+      <%= f.text_area :with_family_reason, class:"report-short", placeholder:"理由(100文字まで)", maxlength:"100" %>
     </div>
-    <%= f.text_area :with_family_reason, class:"report-short", placeholder:"理由(100文字まで)", maxlength:"100" %>
    </div>
    <div class="report-rate-form">
     <div class="report-form-wrap">
@@ -69,12 +78,13 @@
      <%= f.label :preparation, "評価", class: "preparation" %>
      <div class="rate-detail" id="edit-preparation-<%= @report.id %>"></div>
     </div>
-   <div class="report-edit-field">
-    <div class="report-form-wrap">
-     <label class="form-text">理由</label>
-     <span class="indispensable" style="color: black;">任意</span>
+    <div class="report-edit-field">
+      <div class="report-form-wrap">
+      <label class="form-text">理由</label>
+      <span class="indispensable" style="color: black;">任意</span>
+      </div>
+      <%= f.text_area :preparation_reason, class:"report-short", placeholder:"理由(100文字まで)", maxlength:"100" %>
     </div>
-    <%= f.text_area :preparation_reason, class:"report-short", placeholder:"理由(100文字まで)", maxlength:"100" %>
    </div>
 
    <%= render 'shared/rate-edit' %>
@@ -85,3 +95,5 @@
    <% end %>
   </div> 
 </div>
+
+<%= render "shared/footer" %>

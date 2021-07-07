@@ -1,0 +1,16 @@
+<%= render "shared/second-header" %>
+
+<div class="artists-main">
+  <div class="artists-subtitle">
+   <h2 class="ribbon8">アーティスト一覧</h2>
+  </div>
+  <ul class="artists-all">
+    <% @reports.each do |report| %>
+    <li class="artists-content">
+      <%= report.artist %>
+    <li>
+    <% end %>
+  </ul>
+</div>
+
+<%= render "shared/footer" %>
