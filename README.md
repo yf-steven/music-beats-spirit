@@ -45,7 +45,7 @@
 **ユーザー登録機能**
 
 
-![ユーザー登録機能](https://gyazo.com/c9e67ffdbd1735a3872870b35022ea6a.gif)
+[ユーザー登録機能](https://gyazo.com/c9e67ffdbd1735a3872870b35022ea6a)
 
 **ユーザー詳細・編集・削除機能**
 
