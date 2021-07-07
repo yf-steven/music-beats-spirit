@@ -1,0 +1,12 @@
+.artists-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 600px;
+}
+.artists-subtitle{
+  margin: 20px 0 10px 0;
+}
+.artists-content{
+  margin: 10px 0;
+}

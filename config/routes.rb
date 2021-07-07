@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root to: 'reports#index'
   resources :reports do
     resources :comments, only: [:create, :destroy]
+    collection do
+      get 'artists'
+    end
   end
   resources :users, only: [:show, :destroy]
 end

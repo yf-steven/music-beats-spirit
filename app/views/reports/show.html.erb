@@ -6,21 +6,28 @@
     <span class="show-title">
      <%= @report.title %>
     </span>
+    <div class="show-content-box">
+    <h3 class="ribbon8">アーティスト</h3>
+    <span class="show-artist">
+      <%= @report.artist %>
+    </span>
    <div class="show-text-box">
     <h3 class="ribbon8">テキスト</h3>
     <span class="show-text">
       <%= @report.text %>
     </span>
    </div>
-   <div class="show-recommend-box">
+   <div class="show-content-box">
     <h3 class="ribbon8">オススメポイント</h3>
     <span class="show-recommend">
       <%= @report.recommend %>
     </span>
    </div>
-   <div class="show-rate-box">
+   <div class="show-content-box">
     <h3 class="ribbon8">ライブの評価</h3>
-    <span class="rate-contents">ライブの激しさ</span>
+   </div>
+   <div class="show-rate-box">
+    <span class="rate-contents-top">ライブの激しさ</span>
     <div class="show-rate" id="star-violent-<%= @report.id %>"></div>
    </div>
    <div class="reason-box">

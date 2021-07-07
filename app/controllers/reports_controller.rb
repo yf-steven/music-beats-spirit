@@ -1,5 +1,5 @@
 class ReportsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :artists]
   before_action :report_find, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -43,10 +43,14 @@ class ReportsController < ApplicationController
     end
   end
 
+  def artists
+    @reports = Report.select(:artist).distinct.order(artist: "ASC")
+  end
+
   private
 
   def report_params
-    params.require(:report).permit(:title, :text, :recommend, :violent, :violent_reason, :with_family, :with_family_reason, :preparation, :preparation_reason).merge(user_id: current_user.id)
+    params.require(:report).permit(:title, :artist, :text, :recommend, :violent, :violent_reason, :with_family, :with_family_reason, :preparation, :preparation_reason).merge(user_id: current_user.id)
   end
 
   def report_find
