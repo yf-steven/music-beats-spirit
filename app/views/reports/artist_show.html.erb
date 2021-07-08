@@ -1,0 +1,66 @@
+<%= render "shared/second-header" %>
+
+<div class="artist-show">
+ <div class="artist-show-field">
+   <h3 class="ribbon8">アーティスト</h3>
+ </div>
+ <div class="artist-show-field">
+  <span class="artist-show-name">
+   <%= @report.artist %>
+  </span>
+ </div>
+ <div class="artist-show-wrap">
+  <div class="artist-show-subtitle">
+   <h3 class="ribbon8">ライブの評価</h3>
+  </div>
+  <div class="artist-show-rate-box">
+   <span class="artist-show-rate-subtitle">
+    ライブの激しさ
+   </span>
+   <div class="artist-show-rate-contents">
+    <%= @reports.average(:violent).to_f.round(1) %>
+   </div>
+   <div class="artist-show-rate" id="artist-star-violent" ></div>
+  </div>
+  <div class="artist-show-rate-box">
+   <span class="artist-show-rate-subtitle">
+    女性・家族連れの方へのオススメ度
+   </span>
+   <div class="artist-show-rate-contents">
+    <%= @reports.average(:with_family).to_f.round(1) %>
+   </div>
+   <div class="artist-show-rate" id="artist-star-with-family" ></div>
+  </div>
+  <div class="artist-show-rate-box">
+   <span class="artist-show-rate-subtitle">
+    ライブの予習必要度
+   </span>
+   <div class="artist-show-rate-contents">
+    <%= @reports.average(:preparation).to_f.round(1) %>
+   </div>
+   <div class="artist-show-rate" id="artist-star-preparation" ></div>
+  </div>
+
+  <%= render "shared/artist-show" %>
+
+ </div>
+ <div class="artist-show-field">
+  <h3 class="ribbon8">レポート一覧</h3>
+ </div>
+ <ul class="artist-show-reports-box">
+  <% @reports.each do |report| %>
+  <li class="artist-show-report">
+   <%= link_to report_path(report.id) do %>
+   <div class="artist-show-user">
+    <%= report.user.nickname %>
+   </div>
+   <div class="artist-show-title">
+    <%= report.title %>
+   </div>
+   <% end %>
+  </li>
+  <% end %>
+ </ul>
+</div>
+
+<%= render "shared/footer" %>

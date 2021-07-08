@@ -1,6 +1,6 @@
 class ReportsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show, :artists]
-  before_action :report_find, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show, :artists, :artist_show]
+  before_action :report_find, only: [:show, :edit, :update, :destroy, :artist_show]
 
   def index
     @reports = Report.includes(:user).order(created_at: "DESC")
@@ -44,7 +44,11 @@ class ReportsController < ApplicationController
   end
 
   def artists
-    @reports = Report.select(:artist).distinct.order(artist: "ASC")
+    @reports = Report.includes(:user).order(artist: "ASC")
+  end
+
+  def artist_show
+    @reports = Report.where(artist: @report.artist)
   end
 
   private

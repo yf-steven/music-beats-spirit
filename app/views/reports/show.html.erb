@@ -9,7 +9,7 @@
     <div class="show-content-box">
     <h3 class="ribbon8">アーティスト</h3>
     <span class="show-artist">
-      <%= @report.artist %>
+      <%= link_to @report.artist, artist_show_report_path(@report.id) %>
     </span>
    <div class="show-text-box">
     <h3 class="ribbon8">テキスト</h3>

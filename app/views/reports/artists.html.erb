@@ -7,7 +7,7 @@
   <ul class="artists-all">
     <% @reports.each do |report| %>
     <li class="artists-content">
-      <%= report.artist %>
+      <%= link_to report.artist, artist_show_report_path(report.id) %>
     <li>
     <% end %>
   </ul>

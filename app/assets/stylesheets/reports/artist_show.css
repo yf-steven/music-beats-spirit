@@ -1,0 +1,46 @@
+.artist-show{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 600px;
+}
+.artist-show-field{
+  margin: 10px 0;
+}
+.artist-show-name{
+  font-size: 18px;
+}
+.artist-show-wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.artist-show-subtitle{
+  margin: 10px 0 20px 0;
+}
+.artist-show-rate-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 18px;
+}
+.artist-show-rate-subtitle{
+  margin-bottom: 5px;
+}
+.artist-show-rate-contents{
+  margin-bottom: 5px;
+}
+.artist-show-reports-box{
+  margin: 10px 0;
+}
+.artist-show-report{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.artist-show-user{
+  margin-bottom: 10px;
+}
