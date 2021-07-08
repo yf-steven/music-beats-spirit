@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     collection do
       get 'artists'
     end
+    member do
+      get 'artist_show'
+    end
   end
   resources :users, only: [:show, :destroy]
 end
