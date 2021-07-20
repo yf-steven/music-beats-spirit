@@ -1,0 +1,79 @@
+<%= render "shared/second-header" %>
+
+<div class="search-overall">
+ <div class="search-wrap">
+  <h2 class="search-subtitle">
+   検索するキーワードを入力して下さい
+  </h2>
+ </div>
+ <%= form_with( scope: :search, url: search_reports_path, method: :get, local: true, class:"search-form") do |f| %>
+ <div class="search-form-field">
+  <h3 class="search-form-subtitle">
+   ・タイトル
+  </h3>
+ </div>
+ <div class="search-form-contents">
+  <%= f.text_field :title, value: @search_params[:title], autofocus: true, maxlength:"40", class:"search-form-input" %>
+ </div>
+ <div class="search-form-field">
+  <h3 class="search-form-subtitle">
+   ・アーティスト
+  </h3>
+ </div>
+ <div class="search-form-contents">
+  <%= f.text_field :artist, value: @search_params[:artist], maxlength:"30", class:"search-form-input" %>
+ </div>
+ <div class="search-form-field">
+  <h3 class="search-form-subtitle">
+   ・本文
+  </h3>
+ </div>
+ <div class="search-form-text">
+  <%= f.text_area :text, value: @search_params[:text], class:"search-form-input", maxlength:"100" %>
+ </div>
+ <div class="search-form-field">
+  <h3 class="search-form-subtitle">
+   ・ライブのオススメポイント
+  </h3>
+ </div>
+ <div class="search-form-text">
+  <%= f.text_area :recommend, value: @search_params[:recommend], class:"search-form-input", maxlength:"50" %>
+ </div>
+
+ <div class="search-form-btn-field">
+  <%= submit_tag '検索する', class:"search-form-btn" %>
+ </div>
+
+ <% end %>
+
+ <div class="search-report-wrap">
+  <% unless @search_params.blank? %>
+    <ul class="search-report-overall">
+     <% @reports.each do |report| %>
+     <li class="search-report-list">
+      <%= link_to report_path(report.id) do %>
+      <div class="search-report-field">
+       <h3 class="search-report-nickname">
+        <%= report.user.nickname %>
+       </h3>
+      </div>
+      <div class="search-report-field">
+       <h3 class="search-report-title">
+        <%= report.title %>
+       </h3>
+      </div>
+      <% end %>
+     </li>
+     <% end %>
+    </ul>
+  <% else %>
+   <div class="search-report-none">
+    <h3 class="search-result">
+     該当するレポートはありません
+    </h3>
+   </div>
+  <% end %>
+ </div>
+</div>
+
+<%= render "shared/footer" %>

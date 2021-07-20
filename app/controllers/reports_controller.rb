@@ -1,6 +1,6 @@
 class ReportsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show, :artists, :artist_show]
-  before_action :report_find, only: [:show, :edit, :update, :destroy, :artist_show]
+  before_action :authenticate_user!, except: [:index, :show, :artist]
+  before_action :report_find, only: [:show, :edit, :update, :destroy, :artist]
 
   def index
     @reports = Report.includes(:user).order(created_at: "DESC")
@@ -43,12 +43,13 @@ class ReportsController < ApplicationController
     end
   end
 
-  def artists
-    @reports = Report.includes(:user).order(artist: "ASC")
+  def artist
+    @reports = Report.where(artist: @report.artist)
   end
 
-  def artist_show
-    @reports = Report.where(artist: @report.artist)
+  def search
+    @search_params = report_search_params
+    @reports = Report.search(@search_params).joins(:user)
   end
 
   private
@@ -60,5 +61,9 @@ class ReportsController < ApplicationController
   def report_find
     @report = Report.find(params[:id])    
   end
-  
+
+  def report_search_params
+    params.fetch(:search, {}).permit(:title, :artist, :text, :recommend)
+  end
+
 end
