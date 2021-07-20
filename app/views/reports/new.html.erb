@@ -26,14 +26,18 @@
       <label class="form-text">本文</label>
       <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :text, class:"report-text", placeholder:"レポート内容(800文字まで)", maxlength:"800" %>
+      <div class="report-form-text-box">
+       <%= f.text_area :text, class:"report-text", placeholder:"レポート内容(1200文字まで)", maxlength:"1200" %>
+      </div>
     </div>
     <div class="report-form-field">
       <div class="report-form-wrap">
       <label class="form-text">このライブのオススメポイント</label>
       <span class="indispensable" style="color: black;">任意</span>
       </div>
-      <%= f.text_area :recommend, class:"report-short", placeholder:"オススメポイント(100文字まで)", maxlength:"100" %>
+      <div class="report-form-recommend-box">
+       <%= f.text_area :recommend, class:"report-recommend", placeholder:"オススメポイント(100文字まで)", maxlength:"100" %>
+      </div>
     </div>
     <div class="report-rate-form">
       <div class="report-form-wrap">

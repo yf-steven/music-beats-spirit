@@ -4,7 +4,7 @@
   </div>
   <div class= "navi">
     <ul class= "right-lists">
-     <%# <li><%= link_to "Artists", artists_reports_path, class:"artists" %></li> 
+      <li><%= link_to "検索", search_reports_path, class:"search" %></li> 
      <% if user_signed_in? %>
       <li><%= link_to current_user.nickname, user_path(current_user.id), class:"user-name" %>
       <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"logout" %>

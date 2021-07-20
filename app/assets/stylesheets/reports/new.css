@@ -32,21 +32,26 @@
   padding: 10px;
   width: 400px;
 }
-.report-text{
-  resize: none;
+.report-form-text-box{
   margin: 10px 0;
   border: 1px solid lightgray;
   width: 400px;
   height: 500px;
   padding: 10px 10px;
+  overflow: scroll;
 }
-.report-short{
+.report-text, .report-recommend{
   resize: none;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.report-form-recommend-box{
   margin: 10px 0;
   border: 1px solid lightgray;
   width: 400px;
   height: 80px;
   padding: 10px 10px;
+  overflow: scroll;
 }
 .report-rate-form{
   display: flex;
