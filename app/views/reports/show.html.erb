@@ -14,7 +14,7 @@
    <div class="show-text-box">
     <h3 class="ribbon8">テキスト</h3>
     <span class="show-text">
-      <%= @report.text %>
+      <%= safe_join(@report.text.split("\n"),tag(:br)) %>
     </span>
    </div>
    <div class="show-content-box">

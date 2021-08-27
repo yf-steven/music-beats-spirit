@@ -74,6 +74,13 @@
   align-items: center;
   margin: 20px 0;
 }
+.rate-reason{
+  border: solid 1px lightgray;
+  padding: 10px;
+  resize: none;
+  width: 400px;
+  height: 80px;
+}
 .report-send-btn{
   background-color: #FF0000;
   color: #F5F5F5;
