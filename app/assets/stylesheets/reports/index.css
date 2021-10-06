@@ -79,3 +79,8 @@
 .report-btn-text{
   font-family: 'arial unicode ms';
 }
+.flash{
+  width: 100%;
+  text-align: center;
+  background-color: aqua;
+}

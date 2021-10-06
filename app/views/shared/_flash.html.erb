@@ -1,0 +1,9 @@
+<% if flash[:notice] %>
+ <div class="flash"><%= flash[:notice] %></div>
+<% end %>
+
+<script>
+ $(function(){   
+   setTimeout("$('.flash').fadeOut('slow')", 3000);
+ });
+</script>
