@@ -13,7 +13,7 @@ class ReportsController < ApplicationController
   def create
     @report = Report.new(report_params)
     if @report.save
-      redirect_to root_path
+      redirect_to root_path, notice: "レポートを投稿しました！"
     else
       render :new
     end
@@ -21,7 +21,7 @@ class ReportsController < ApplicationController
 
   def show
     @comment = Comment.new
-    @comments = Comment.includes(:user).order(created_at: "DESC")
+    @comments = @report.comments.includes(:user).order(created_at: "DESC")
   end
 
   def edit
@@ -29,7 +29,7 @@ class ReportsController < ApplicationController
 
   def update
     if @report.update(report_params)
-      redirect_to report_path(@report.id)
+      redirect_to report_path(@report.id), notice: "レポートを更新しました！"
     else
       render :edit
     end    
@@ -37,7 +37,7 @@ class ReportsController < ApplicationController
 
   def destroy
     if @report.destroy
-     redirect_to root_path
+     redirect_to root_path, notice: "レポートを削除しました！"
     else
       render :edit
     end
