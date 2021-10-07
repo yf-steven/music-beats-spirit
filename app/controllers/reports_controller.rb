@@ -1,6 +1,7 @@
 class ReportsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :artist]
   before_action :report_find, only: [:show, :edit, :update, :destroy, :artist]
+  before_action :back_to_index, only: [:edit, :update, :destroy]
 
   def index
     @reports = Report.includes(:user).order(created_at: "DESC")
@@ -64,6 +65,12 @@ class ReportsController < ApplicationController
 
   def report_search_params
     params.fetch(:search, {}).permit(:title, :artist, :text, :recommend)
+  end
+
+  def back_to_index
+    if current_user.id != @report.user.id
+      redirect_to root_path
+    end
   end
 
 end
