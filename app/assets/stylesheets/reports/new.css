@@ -26,11 +26,16 @@
   display: flex;
   justify-content: center;
 }
-.report-title, .report-artist{
+.report-short-box{
   margin: 10px 0;
   border: 1px solid lightgray;
   padding: 10px;
   width: 400px;
+}
+.report-text{
+  height: 100%;
+  width: 100%;
+  resize: none;
 }
 .report-form-text-box{
   margin: 10px 0;
@@ -40,12 +45,12 @@
   padding: 10px 10px;
   overflow: scroll;
 }
-.report-text, .report-recommend{
+.report-item{
   resize: none;
   width: 100%;
   height: 100%;
 }
-.report-form-recommend-box{
+.report-form-evaluate-box{
   margin: 10px 0;
   border: 1px solid lightgray;
   width: 400px;

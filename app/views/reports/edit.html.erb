@@ -12,14 +12,18 @@
      <label class="form-text">タイトル</label>
      <span class="indispensable">必須</span>
     </div>
-    <%= f.text_field :title, class:"report-title", autofocus:true, placeholder:"レポートのタイトル(40文字まで)", maxlength:"40" %>
+    <div class="report-short-box">
+      <%= f.text_field :title, class:"report-title", autofocus:true, placeholder:"レポートのタイトル(40文字まで)", maxlength:"40" %>
+    </div>
    </div>
    <div class="report-form-feild">
     <div class="report-form-wrap">
      <label class="form-text">アーティスト</label>
      <span class="indispensable">必須</span>
     </div>
-    <%= f.text_field :artist, class:"report-artist", placeholder: "アーティスト名(正式名称で30文字)", maxlength:"30" %>
+    <div class="report-short-box">
+      <%= f.text_field :artist, class:"report-artist", placeholder: "アーティスト名(正式名称で30文字)", maxlength:"30" %>
+    </div>
    </div>
    <div class="report-form-field">
     <div class="report-form-wrap">
@@ -35,8 +39,8 @@
      <label class="form-text">このライブのオススメポイント</label>
      <span class="indispensable" style="color: black;">任意</span>
     </div>
-    <div class="report-form-recommend-box">
-     <%= f.text_area :recommend, class:"report-recommend", placeholder:"オススメポイント(100文字)", maxlength:"100" %>
+    <div class="report-form-evaluate-box">
+     <%= f.text_area :recommend, class:"report-item", placeholder:"オススメポイント(100文字)", maxlength:"100" %>
     </div>
    </div>
    <div class="report-rate-form">
@@ -53,7 +57,9 @@
       <label class="form-text">理由</label>
       <span class="indispensable" style="color: black;">任意</span>
       </div>
-      <%= f.text_area :violent_reason, class:"rate-reason", placeholder:"理由(100文字まで)", maxlength:"100" %>
+      <div class="report-form-evaluate-box">
+        <%= f.text_area :violent_reason, class:"report-item", placeholder:"理由(100文字まで)", maxlength:"100" %>
+      </div>
     </div>
    </div>
    <div class="report-rate-form">
@@ -70,7 +76,9 @@
       <label class="form-text">理由</label>
       <span class="indispensable" style="color: black;">任意</span>
       </div>
-      <%= f.text_area :with_family_reason, class:"rate-reason", placeholder:"理由(100文字まで)", maxlength:"100" %>
+      <div class="report-form-evaluate-box">
+        <%= f.text_area :with_family_reason, class:"report-item", placeholder:"理由(100文字まで)", maxlength:"100" %>
+      </div>
     </div>
    </div>
    <div class="report-rate-form">
@@ -87,7 +95,9 @@
       <label class="form-text">理由</label>
       <span class="indispensable" style="color: black;">任意</span>
       </div>
-      <%= f.text_area :preparation_reason, class:"rate-reason", placeholder:"理由(100文字まで)", maxlength:"100" %>
+      <div class="report-form-evaluate-box">
+        <%= f.text_area :preparation_reason, class:"report-item", placeholder:"理由(100文字まで)", maxlength:"100" %>
+      </div>
     </div>
    </div>
 

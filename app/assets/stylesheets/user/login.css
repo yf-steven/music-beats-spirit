@@ -54,11 +54,22 @@
   margin-left: 10px;
   color: #FF0000;
 }
-.form-input{
+.form-contents{
   width: 70%;
   margin: 10px 0;
   padding: 10px 10px;
   border: 1px solid lightgray;
+}
+.form-introduce{
+  width: 70%;
+  height: 100px;
+  margin: 10px 0;
+  padding: 10px 10px;
+  border: 1px solid lightgray;
+}
+.form-input{
+  height: 100%;
+  width: 100%;
   resize: none;
 }
 .form-info{
