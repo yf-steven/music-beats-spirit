@@ -2,19 +2,17 @@ class CommentsController < ApplicationController
   before_action :report_find, only: [:create, :destroy]
 
   def create
-    @comment = @report.comments.new(comment_params)
+    @comment = @report.comments.build(comment_params)
     if @comment.save
-      redirect_to report_path(@report.id)
-    else
-      @comments = @report.comments.includes(:user)
-      render "reports/show"
+      render :index
     end
   end
 
   def destroy
-    comment = Comment.find(params[:id])
-    comment.destroy
-    redirect_to report_path(@report.id)
+    @comment = Comment.find(params[:id])
+    if @comment.destroy
+      render :index
+    end
   end
 
   private
@@ -24,7 +22,7 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
-    params.require(:comment).permit(:text).merge(user_id: current_user.id)
+    params.require(:comment).permit(:text, :report_id).merge(user_id: current_user.id)
   end
 
 end

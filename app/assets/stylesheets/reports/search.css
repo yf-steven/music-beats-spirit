@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   min-height: 600px;
+  background-color: #EEFFFF;
 }
 .search-wrap{
   margin: 20px 0;
