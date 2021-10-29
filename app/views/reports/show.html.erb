@@ -64,8 +64,13 @@
       <%= link_to "レポートの削除", report_path(@report.id), method: :delete, data: {confirm: "削除しますか？"}, class: "delete-btn" %>
    <% end %>
    <h3 class="ribbon8">コメント</h3>
+   <ul id="report-comment-box">
+
+    <%= render partial: "comments/index", locals: { comments: @comments} %>    
+    
+   </ul>
    <% if user_signed_in? %>
-     <%= form_with model: [@report, @comment], class: "comment-form", local: true do |f| %>
+     <%= form_with model: [@report, @comment], class: "comment-form" do |f| %>
 
      <%= render 'shared/error-messages', model: f.object %>
 
@@ -80,21 +85,6 @@
       ※ コメントするにはユーザー登録とログインが必要です ※
      </p>
    <% end %>
-   <ul class="report-comment-box">
-    <% @comments.each do |comment| %>
-    <li class="comment-field">
-     <span class="comment-user">
-      <%= link_to comment.user.nickname, user_path(comment.user.id) %>
-     </span>
-     <span class="comment-text">
-      <%= comment.text %>
-     </span>
-     <% if user_signed_in? && comment.user.id == current_user.id %>
-       <%= link_to "コメントを削除する", report_comment_path(comment.report.id, comment.id), method: :delete, data: {confirm: "コメントを削除しますか？"}, class:"comment-delete-btn" %>
-     <% end %>
-    </li>
-    <% end %>
-   </ul>
   </div>
 </div>
 

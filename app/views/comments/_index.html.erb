@@ -1,0 +1,13 @@
+<% comments.each do |comment| %>
+  <li class="comment-field">
+    <span class="comment-user">
+      <%= link_to comment.user.nickname, user_path(comment.user.id) %>
+    </span>
+    <span class="comment-text">
+      <%= comment.text %>
+    </span>
+    <% if user_signed_in? && comment.user.id == current_user.id %>
+      <%= link_to "コメントを削除する", report_comment_path(comment.report_id, comment.id), method: :delete, remote: true, data: {confirm: "コメントを削除しますか？"}, class:"comment-delete-btn" %>
+    <% end %>
+  </li>
+<% end %>
