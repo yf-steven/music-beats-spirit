@@ -86,7 +86,7 @@
 - has_many :reports
 - has_many :comments
 
-## reportテーブル
+## reportsテーブル
 
 |    column   |     type   |      options     |
 | ----------- | ---------- | ---------------- |
@@ -115,3 +115,11 @@
 
 - belongs_to :user
 - belongs_to :report
+
+## likesテーブル
+
+| column |    type    |     options      |
+| ------ | ---------- | ---------------- |
+|  user  | references | foreign_key:true |
+| report | references | foreign_key:true |
+ 

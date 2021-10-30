@@ -59,10 +59,19 @@
     </span>
    </div>
 
-   <% if user_signed_in? && @report.user.id == current_user.id %>
-      <%= link_to "レポートの編集", edit_report_path(@report.id), class: "edit-btn" %>
-      <%= link_to "レポートの削除", report_path(@report.id), method: :delete, data: {confirm: "削除しますか？"}, class: "delete-btn" %>
-   <% end %>
+   <div class="likes-box">
+    <h3 class="ribbon8">イイネ☆</h3>
+    <% if current_user.liked_by?(@report.id) %>
+      <div class="report-likes">
+        <%= link_to "イイネ☆を外す", report_like_path(current_user.id, @report.id), method: :delete %> <%= @report.likes.count%>
+      </div>
+    <% else %>
+      <div class="report-likes">
+        <%= link_to "イイネ☆", report_likes_path(@report.id), method: :post %> <%= @report.likes.count%>
+      </div>
+    <% end %>
+   </div>
+
    <h3 class="ribbon8">コメント</h3>
    <ul id="report-comment-box">
 
@@ -85,6 +94,12 @@
       ※ コメントするにはユーザー登録とログインが必要です ※
      </p>
    <% end %>
+
+   <% if user_signed_in? && @report.user.id == current_user.id %>
+      <%= link_to "レポートの編集", edit_report_path(@report.id), class: "edit-btn" %>
+      <%= link_to "レポートの削除", report_path(@report.id), method: :delete, data: {confirm: "削除しますか？"}, class: "delete-btn" %>
+   <% end %>
+   
   </div>
 </div>
 
