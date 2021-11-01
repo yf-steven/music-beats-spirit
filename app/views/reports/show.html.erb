@@ -61,20 +61,17 @@
 
    <div class="likes-box">
     <h3 class="ribbon8">イイネ☆</h3>
-    <% if current_user.liked_by?(@report.id) %>
-      <div class="report-likes">
-        <%= link_to "イイネ☆を外す", report_like_path(current_user.id, @report.id), method: :delete %> <%= @report.likes.count%>
-      </div>
-    <% else %>
-      <div class="report-likes">
-        <%= link_to "イイネ☆", report_likes_path(@report.id), method: :post %> <%= @report.likes.count%>
-      </div>
-    <% end %>
    </div>
+   <div class="report-likes">
+
+    <%= render 'likes/report', report: @report %>
+    
+   </div>
+   
 
    <h3 class="ribbon8">コメント</h3>
    <ul id="report-comment-box">
-
+    
     <%= render partial: "comments/index", locals: { comments: @comments} %>    
     
    </ul>
