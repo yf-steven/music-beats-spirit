@@ -1,7 +1,9 @@
 <% if current_user.liked_by?(report.id) %>
-  <%= link_to "イイネ☆を外す", report_like_path(current_user.id, report.id), method: :delete, remote: true %>
+  <%= link_to "イイネ☆を外す", report_like_path(current_user.id, report.id), class: "like-link", method: :delete, remote: true %>
+  <i class="fas fa-hand-peace unlike-btn"></i>
   <%= report.likes.count%>
 <% else %>
-  <%= link_to "イイネ☆", report_likes_path(current_user.id, report.id), method: :post, remote: true %> 
+  <%= link_to "イイネ☆", report_likes_path(current_user.id, report.id), class: "like-link", method: :post, remote: true %> 
+  <i class="far fa-hand-peace like-btn"></i>
   <%= report.likes.count%>
 <% end %>

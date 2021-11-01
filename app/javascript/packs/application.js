@@ -11,7 +11,7 @@ require("channels")
 window.jQuery = window.$ = require('jquery')
 
 require("../jquery_raty")
-
+import '@fortawesome/fontawesome-free/js/all';
 
 
 
