@@ -11,6 +11,7 @@ class Report < ApplicationRecord
 
   belongs_to :user
   has_many :comments, :dependent => :destroy
+  has_many :likes, :dependent => :destroy
   
   scope :search, -> (search_params) do
     return if search_params.blank?

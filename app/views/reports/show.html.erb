@@ -59,13 +59,19 @@
     </span>
    </div>
 
-   <% if user_signed_in? && @report.user.id == current_user.id %>
-      <%= link_to "レポートの編集", edit_report_path(@report.id), class: "edit-btn" %>
-      <%= link_to "レポートの削除", report_path(@report.id), method: :delete, data: {confirm: "削除しますか？"}, class: "delete-btn" %>
-   <% end %>
+   <div class="likes-box">
+    <h3 class="ribbon8">イイネ☆</h3>
+   </div>
+   <div class="report-likes">
+
+    <%= render 'likes/report', report: @report %>
+    
+   </div>
+   
+
    <h3 class="ribbon8">コメント</h3>
    <ul id="report-comment-box">
-
+    
     <%= render partial: "comments/index", locals: { comments: @comments} %>    
     
    </ul>
@@ -85,6 +91,12 @@
       ※ コメントするにはユーザー登録とログインが必要です ※
      </p>
    <% end %>
+
+   <% if user_signed_in? && @report.user.id == current_user.id %>
+      <%= link_to "レポートの編集", edit_report_path(@report.id), class: "edit-btn" %>
+      <%= link_to "レポートの削除", report_path(@report.id), method: :delete, data: {confirm: "削除しますか？"}, class: "delete-btn" %>
+   <% end %>
+   
   </div>
 </div>
 

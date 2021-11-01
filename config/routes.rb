@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'reports#index'
   resources :reports do
     resources :comments, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy]
     member do
       get 'artist'
     end

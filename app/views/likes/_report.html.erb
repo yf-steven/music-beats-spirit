@@ -1,0 +1,7 @@
+<% if current_user.liked_by?(report.id) %>
+  <%= link_to "イイネ☆を外す", report_like_path(current_user.id, report.id), method: :delete, remote: true %>
+  <%= report.likes.count%>
+<% else %>
+  <%= link_to "イイネ☆", report_likes_path(current_user.id, report.id), method: :post, remote: true %> 
+  <%= report.likes.count%>
+<% end %>

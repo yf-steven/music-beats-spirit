@@ -17,12 +17,17 @@ class User < ApplicationRecord
     clean_up_passwords
     result
    end
+
+   def liked_by?(report_id)
+      Like.where(report_id: report_id).exists?
+   end
          
   validates :nickname, presence: true, uniqueness: true
   
 
   has_many :reports, :dependent => :destroy
   has_many :comments, :dependent => :destroy
+  has_many :likes, :dependent => :destroy
 
   
 end
