@@ -9,8 +9,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
+  margin: 30px 0;
   width: 70vw;
+
 }
 .ribbon8 {
   display: inline-block;
@@ -214,6 +215,7 @@
 }
 .like-link {
   text-decoration: none;
+  display: inline;
 }
 
 .like-link:hover {

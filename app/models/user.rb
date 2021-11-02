@@ -19,7 +19,7 @@ class User < ApplicationRecord
    end
 
    def liked_by?(report_id)
-      Like.where(report_id: report_id).exists?
+      self.likes.where(report_id: report_id).exists?
    end
          
   validates :nickname, presence: true, uniqueness: true

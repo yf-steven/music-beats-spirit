@@ -87,3 +87,6 @@
   text-align: center;
   background-color: aqua;
 }
+.list:hover{
+  color: red;
+}
