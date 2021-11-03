@@ -54,9 +54,18 @@
   margin: 10px 0;
   overflow-wrap: anywhere;
 }
-.show-text, .show-artist{
+.show-text{
   font-size: 18px;
   margin: 30px 0 10px 0;
+}
+.show-artist{
+  font-size: 18px;
+  margin: 30px 0 10px 0;
+  border-bottom: 1px solid black;
+}
+.show-artist:hover{
+  color: red;
+  border-bottom: 1px solid red;
 }
 .show-content-box{
   margin: 10px 0;
@@ -95,6 +104,10 @@
   margin: 30px 0 10px 0;
   font-size: 18px;
   border-bottom: 1px black solid;
+}
+.show-nickname:hover{
+  color: red;
+  border-bottom: 1px solid red;
 }
 .edit-btn{
   margin: 10px 0 5px 0;
@@ -215,11 +228,10 @@
 }
 .like-link {
   text-decoration: none;
-  display: inline;
 }
 
 .like-link:hover {
-  background-color: #fff!important;
+  color: red;
 }
 
 .like-btn {
@@ -230,4 +242,8 @@
 .unlike-btn {
   font-size: 15px;
   color: #e54747;
+}
+
+.no-login-like{
+  display: inline;
 }

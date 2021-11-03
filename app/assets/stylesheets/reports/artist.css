@@ -45,3 +45,6 @@
 .artist-show-user{
   margin-bottom: 10px;
 }
+.artist-show-report:hover{
+  color: red;
+}
