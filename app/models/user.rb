@@ -22,7 +22,7 @@ class User < ApplicationRecord
       self.likes.where(report_id: report_id).exists?
    end
          
-  validates :nickname, presence: true, uniqueness: true
+  validates :nickname, presence: true, uniqueness: { case_sensitive: false}
   
 
   has_many :reports, :dependent => :destroy
