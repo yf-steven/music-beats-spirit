@@ -4,9 +4,9 @@ class Report < ApplicationRecord
     validates :title
     validates :artist
     validates :text
-    validates :violent, presence: { message: "の評価の項目を選んで下さい" }
-    validates :with_family, presence: { message: "の評価の項目を選んで下さい" }
-    validates :preparation, presence: { message: "の評価の項目を選んで下さい" }
+    validates :violent, presence: { message: "の評価は星0.5以上を選んでください" }
+    validates :with_family, presence: { message: "の評価は星0.5以上を選んでください" }
+    validates :preparation, presence: { message: "の評価は星0.5以上を選んでください" }
   end
 
   belongs_to :user
