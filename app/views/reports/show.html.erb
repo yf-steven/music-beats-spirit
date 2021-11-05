@@ -72,13 +72,15 @@
    <h3 class="ribbon8">コメント</h3>
    <ul id="report-comment-box">
     
-    <%= render partial: "comments/index", locals: { comments: @comments} %>    
+    <%= render partial: "comments/index", locals: { comments: @comments} %>
+
+    <div id="comment-error">
+      <%= render 'shared/error-messages', model: @comment %>
+    </div>
     
    </ul>
    <% if user_signed_in? %>
      <%= form_with model: [@report, @comment], class: "comment-form" do |f| %>
-
-     <%= render 'shared/error-messages', model: f.object %>
 
       <%= f.text_area :text, placeholder:"コメントの記入(400字まで)", maxlength:"400", class:"comment-input" %>
       <p class="comment-warn">

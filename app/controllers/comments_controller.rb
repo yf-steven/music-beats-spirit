@@ -5,6 +5,8 @@ class CommentsController < ApplicationController
     @comment = @report.comments.build(comment_params)
     if @comment.save
       render :index
+    else
+      render :error
     end
   end
 

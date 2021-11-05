@@ -247,3 +247,6 @@
 .no-login-like{
   display: inline;
 }
+#comment-error{
+  margin-top: 20px;
+}
